@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View ,Image} from 'react-native'
 import React from 'react'
 import Logo from "../assets/Logo.png"
+import { Link } from 'expo-router'
 
 const index = () => {
   return (
@@ -9,11 +10,13 @@ const index = () => {
 <Image source={Logo}/>
 
       
-      <Text style={styles.title}>Reading List 1</Text>
+      <Text style={[styles.title, {color:'purple'}]}>Reading List 1</Text>
       <Text style={{marginTop:10, marginBottom:30}}>Test</Text>
       <View style={styles.card}>
         <Text>Hello, this is a card</Text>
       </View>
+      <Link href="/about">About Page</Link>
+      <Link href="/contact">Contact Page</Link>
     </View>
   )
 }
